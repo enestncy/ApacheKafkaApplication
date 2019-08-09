@@ -1,0 +1,74 @@
+ccdzookeeper-3.4.12
+kafka_2.12-2.3.0
+
+-------------------------------------------------------------------------
+Komut Satýrý Aç... / Zookeeper Çalýþtýrma
+-------------------------------------------------------------------------
+>zkserver
+-------------------------------------------------------------------------
+Yeni Komut Satýrý Aç... / Kafka Çalýþtýrma
+-------------------------------------------------------------------------
+>cd\
+
+>cd kafka_2.12-2.3.0
+
+>.\bin\windows\kafka-server-start.bat .\config\server.properties
+-------------------------------------------------------------------------
+Yeni Komut Satýrý Aç... / Topic Oluþturma
+-------------------------------------------------------------------------
+>cd\
+
+>cd kafka_2.12-2.3.0
+
+>cd bin
+
+>cd windows
+
+>kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic test
+-------------------------------------------------------------------------
+Yeni Komut Satýrý Aç... / Producer Oluþturma
+-------------------------------------------------------------------------
+>cd\
+
+>cd kafka_2.12-2.3.0
+
+>cd bin
+
+>cd windows
+
+>kafka-console-producer.bat --broker-list localhost:9092 --topic test
+-------------------------------------------------------------------------
+Yeni Komut Satýrý Aç... / Consumer Oluþturma
+-------------------------------------------------------------------------
+>cd\
+
+>cd kafka_2.12-2.3.0
+
+>cd bin
+
+>cd windows
+
+>kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic test
+-------------------------------------------------------------------------
+Tüm ayarlar yapýldýktan sonra Producer komut satýrýndan atýlan mesajlar
+consumer komut satýrýnda görünür
+-------------------------------------------------------------------------
+-------------------------------------------------------------------------
+Var olan Topicleri Listeleme
+-------------------------------------------------------------------------
+>cd\
+
+>cd kafka_2.12-2.3.0
+
+>cd bin
+
+>cd windows
+
+>kafka-topics.bat --list --zookeeper localhost:2181
+
+
+
+
+
+
+

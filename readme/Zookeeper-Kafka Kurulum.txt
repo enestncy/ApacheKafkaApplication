@@ -1,0 +1,55 @@
+------------------------------------------------------------------------------------------------------------------------
+Kullanýlan Versyonlar
+------------------------------------------------------------------------------------------------------------------------
+zookeeper-3.4.12
+kafka_2.12-2.3.0 (bin versyonu)
+
+------------------------------------------------------------------------------------------------------------------------
+Zookeeper Kurulum
+------------------------------------------------------------------------------------------------------------------------
+Zookeeper yazýlýmýnýn çalýþtýrýlmasý için bilgisayarda java'nýn yüklü olmasý gerekmektedir.
+
+Sistem deðiþkenleri path kýsmýnda java bin klasör yolu C:\Program Files\Java\jre1.8.0_191\bin þeklinde tanýmlanmýþ ise
+zookeper doðru çalýþmayacaktýr.
+
+Java'nýn zookeeper ile uyumlu çalýþabilmesi için þu adýmlar izlenir.
+
+1. Kullanýcý deðiþkenleri alanýnda yeni kullanýcý deðiþkeni oluþturulur.
+2. name : JAVA_HOME    value:C:\Program Files\Java\jre1.8.0_191 þeklinde ayarlanýr.
+3. Sistem deðiþkenlerinde Path kýsmýna ;%JAVA_HOME%\bin þeklinde java bin yolu eklenir.
+
+
+Zookeeper kurulum adýmlarý 
+
+1. Zipten çýkartýlan zookeeper-3.4.12 klasörünü C'ye atýlýr.
+2. C:\zookeeper-3.4.12\conf klasörü altýndaki zoo_sample.cfg dosya adýný zoo.cfg olarak deðiþtirilir.
+3. zoo.cfg dosyasýndaki ayarlardan dataDir=/tmp/zookeeper ayarý dataDir=C:\zookeeper-3.4.12\data þeklinde deðiþtirilir.
+4. Sistem deðiþkenlerinde Path kýsmýna C:\zookeeper-3.4.12\bin yolunu ekle.
+5. Komut satýrýna zkserver komutu girilince zookeeper çalýþýr...
+
+------------------------------------------------------------------------------------------------------------------------
+Kafka Kurulum
+------------------------------------------------------------------------------------------------------------------------
+1. Zipten çýkartýlan kafka_2.12-2.3.0 klasörü C'ye atýlýr. (Not: bin versyonu çalýþtý diðeri çalýþmadý.)
+2. C:\kafka_2.11-0.9.0.0\config klasörü altýndaki server.properties dosyasý bulunur ve 3. adýmdaki ayar yapapýlýr
+3. log.dirs=/tmp/kafka-logs ayarý log.dir= C:\kafka_2.12-2.3.0\kafka-logs þeklinde deðiþtirilir.
+
+------------------------------------------------------------------------------------------------------------------------
+Produser-Consumer örneði için Kafka Haberleþme.txt dosyasýný inceleyiniz 
+------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

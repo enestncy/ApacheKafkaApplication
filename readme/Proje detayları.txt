@@ -1,0 +1,18 @@
+- Proje, producer ve consumer olmak üzere iki ayrý modülden oluþur.
+
+- Producer modülü 8070 lokal portunda koþarken consumer modülü 8080 lokal portunda koþar.
+
+- Farklý server'lardan gelen log kayýtlarýný temsil eden log üretme simülasyonu producer modülündedir.
+Bu modülde log kayýtlarý üretilir (C\ServerLogs klasörü altýnda kaydedilir), ve bir listener ile bu kayýtlar 
+okunarak producer aracýlýðý ile kafka broker'a gönderilir.
+
+-Kafka broker'dan mesajlarý alan consumer, consumer modulu içindedir. Bu modülde consumer ile alýnan veriler
+veritabanýna kaydedilirken ayný zamanda browser üzerinden http://localhost:8080/ adresinden 30 dakikalýk
+aralýklarla hangi þehrin 30 dakika içersinde kaç adet log ürettiði gözlemlenebilir.(grafik 30 dakikada bir kez güncellenir) 
+
+- Projede veritabaný olarak mysql kullanýldý. Projede consumer ile alýnan log verileri 
+Mysql'de oluþturulan logbase isimli veri tabýnýnda log tablosu altýnda tutulur. 
+
+-Projede zookeeper olarak zookeeper-3.4.12 ve apache kafka olarak kafka_2.12-2.3.0 (bin versyonu) versyonu
+kullanýldý.
+

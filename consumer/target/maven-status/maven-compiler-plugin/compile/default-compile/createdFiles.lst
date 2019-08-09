@@ -1,0 +1,8 @@
+com\enestuncay\controller\HomeController.class
+com\enestuncay\config\HibernateConfig.class
+com\enestuncay\consumer\Consumer.class
+com\enestuncay\database\dao\LogDAO.class
+com\enestuncay\database\service\LogService.class
+com\enestuncay\app\ConsumerApp.class
+com\enestuncay\config\WebConfig.class
+com\enestuncay\database\entity\Log.class
