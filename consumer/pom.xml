@@ -39,7 +39,7 @@
     </dependencies>
 
     <build>
-        <finalName>producer</finalName>
+        <finalName>consumer</finalName>
     </build>
 
 
